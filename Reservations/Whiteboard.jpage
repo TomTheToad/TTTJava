@@ -1,0 +1,12 @@
+Database testDB = new Database();
+testDB.bootstrap();
+testDB.addPassenger("Jimmy Johnson");
+String result = testDB.addTicket(LocalDate.now(), "Jimmy Johnson", 1000, 1);
+System.out.println(result);
+
+ArrayList<Seat> seatsRemaining = testDB.getOpenSeats(LocalDate.now(), 1000);
+System.out.println(seatsRemaining);
+
+Charter charter1 = new Charter("New York", "Denver", 6010, "2014-06-15T09:30");
+String result = charter1.toString();
+System.out.println(result);
